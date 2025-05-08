@@ -5,11 +5,11 @@ export const App = () => {
   return (
     <>
       {renderPortal(<AddPincode />, "enter-pincode-app")}
-      {/* {renderPortal(<DealerInfoOnCart />, "om-dealer-details-app")} */}
+
     </>
   );
 };
-// I want for specific line items
+
 const renderPortal = (Component, elementId) => {
   const element = document.getElementById(elementId);
   if (element) {

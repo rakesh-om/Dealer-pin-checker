@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./addPincode.css";
 
-const API_URL = "/apps/om-dealer-details/api/getdealerdetails";
+
+const API_URL = "/apps/quickpin-checkout/api/getdealerdetails";
 
 const AddPincode = () => {
   const [pincode, setPincode] = useState("");
@@ -90,11 +91,7 @@ const AddPincode = () => {
               id: product.variantId,
               quantity: 1,
               properties: {
-                dealer_name: dealer.name,
-                dealer_city: dealer.city,
-                dealer_email: dealer.email,
-                dealer_phone: dealer.phone,
-                dealer_pincode: dealer.pincode,
+                   dealer_name: dealer.name,
               },
             },
           ],
@@ -111,7 +108,7 @@ const AddPincode = () => {
 
   return (
     <div className="container">
-      <label className="pincode">Delivery Area Code</label>
+      <label className="pincode">📍 Delivery Area Code</label>
       <div className="input-container">
         <input
           type="text"
@@ -121,7 +118,7 @@ const AddPincode = () => {
           onChange={(e) => setPincode(e.target.value.trim())}
           onKeyDown={(e) => e.key === "Enter" && handleFindDealers()}
         />
-        <button onClick={handleFindDealers} disabled={!pincode}>
+        <button className='dealer-button' onClick={handleFindDealers} disabled={!pincode}>
           Find Dealers
         </button>
       </div>
@@ -135,7 +132,7 @@ const AddPincode = () => {
 
       {showDropdown && (
         <div className="dealer-list">
-          <label htmlFor="dealer-select">Available Dealers</label>
+          <label htmlFor="dealer-select">🧑‍💼Available Dealers</label>
           <select
             id="dealer-select"
             value={selectedDealer}

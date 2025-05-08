@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #222;
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.filter-container label {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-container input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.table-container {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-container th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.table-container td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.table-container tr:last-child td {
+  border-bottom: none;
+}
+
+.table-container tr:hover {
+  background-color: #f9f9f9;
+  transition: background-color 0.2s;
+}
+.chart-wrapper {
+  background: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  width: fit-content;
+}
